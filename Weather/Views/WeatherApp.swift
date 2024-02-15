@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import ios_weather_ui
 
 @main
 struct WeatherApp: App {
+    let networkManager = NetworkManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(networkManager)
         }
     }
 }
