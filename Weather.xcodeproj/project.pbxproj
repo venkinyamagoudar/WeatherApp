@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		243863AD2B7CF6DB0031F3CD /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243863AC2B7CF6DB0031F3CD /* WeatherApp.swift */; };
-		243863AF2B7CF6DB0031F3CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243863AE2B7CF6DB0031F3CD /* ContentView.swift */; };
+		243863AF2B7CF6DB0031F3CD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243863AE2B7CF6DB0031F3CD /* MainView.swift */; };
 		243863B12B7CF6DD0031F3CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243863B02B7CF6DD0031F3CD /* Assets.xcassets */; };
 		243863B42B7CF6DD0031F3CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243863B32B7CF6DD0031F3CD /* Preview Assets.xcassets */; };
 		243863BE2B7CF6DD0031F3CD /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243863BD2B7CF6DD0031F3CD /* WeatherTests.swift */; };
 		243863C82B7CF6DD0031F3CD /* WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243863C72B7CF6DD0031F3CD /* WeatherUITests.swift */; };
 		243863CA2B7CF6DD0031F3CD /* WeatherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243863C92B7CF6DD0031F3CD /* WeatherUITestsLaunchTests.swift */; };
+		24C717722B7E10A80071ACE1 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C717712B7E10A80071ACE1 /* WeatherView.swift */; };
+		24E30B462B809B7F00E8784B /* ios-weather-ui in Frameworks */ = {isa = PBXBuildFile; productRef = 24E30B452B809B7F00E8784B /* ios-weather-ui */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		243863A92B7CF6DB0031F3CD /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		243863AC2B7CF6DB0031F3CD /* WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp.swift; sourceTree = "<group>"; };
-		243863AE2B7CF6DB0031F3CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		243863AE2B7CF6DB0031F3CD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		243863B02B7CF6DD0031F3CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		243863B32B7CF6DD0031F3CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		243863B92B7CF6DD0031F3CD /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,7 @@
 		243863C32B7CF6DD0031F3CD /* WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		243863C72B7CF6DD0031F3CD /* WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITests.swift; sourceTree = "<group>"; };
 		243863C92B7CF6DD0031F3CD /* WeatherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		24C717712B7E10A80071ACE1 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E30B462B809B7F00E8784B /* ios-weather-ui in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +82,7 @@
 				243863BC2B7CF6DD0031F3CD /* WeatherTests */,
 				243863C62B7CF6DD0031F3CD /* WeatherUITests */,
 				243863AA2B7CF6DB0031F3CD /* Products */,
+				24C7176E2B7DF8A60071ACE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +99,7 @@
 		243863AB2B7CF6DB0031F3CD /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				243863AC2B7CF6DB0031F3CD /* WeatherApp.swift */,
-				243863AE2B7CF6DB0031F3CD /* ContentView.swift */,
+				248207642B7E923800C8E353 /* Views */,
 				243863B02B7CF6DD0031F3CD /* Assets.xcassets */,
 				243863B22B7CF6DD0031F3CD /* Preview Content */,
 			);
@@ -127,6 +131,23 @@
 			path = WeatherUITests;
 			sourceTree = "<group>";
 		};
+		248207642B7E923800C8E353 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				243863AC2B7CF6DB0031F3CD /* WeatherApp.swift */,
+				243863AE2B7CF6DB0031F3CD /* MainView.swift */,
+				24C717712B7E10A80071ACE1 /* WeatherView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		24C7176E2B7DF8A60071ACE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +164,9 @@
 			dependencies = (
 			);
 			name = Weather;
+			packageProductDependencies = (
+				24E30B452B809B7F00E8784B /* ios-weather-ui */,
+			);
 			productName = Weather;
 			productReference = 243863A92B7CF6DB0031F3CD /* Weather.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +239,9 @@
 				Base,
 			);
 			mainGroup = 243863A02B7CF6DA0031F3CD;
+			packageReferences = (
+				24E30B442B809B7F00E8784B /* XCRemoteSwiftPackageReference "ios-weather-ui" */,
+			);
 			productRefGroup = 243863AA2B7CF6DB0031F3CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				243863AF2B7CF6DB0031F3CD /* ContentView.swift in Sources */,
+				24C717722B7E10A80071ACE1 /* WeatherView.swift in Sources */,
+				243863AF2B7CF6DB0031F3CD /* MainView.swift in Sources */,
 				243863AD2B7CF6DB0031F3CD /* WeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +616,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		24E30B442B809B7F00E8784B /* XCRemoteSwiftPackageReference "ios-weather-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/venkinyamagoudar/ios-weather-ui.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		24E30B452B809B7F00E8784B /* ios-weather-ui */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24E30B442B809B7F00E8784B /* XCRemoteSwiftPackageReference "ios-weather-ui" */;
+			productName = "ios-weather-ui";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 243863A12B7CF6DA0031F3CD /* Project object */;
 }

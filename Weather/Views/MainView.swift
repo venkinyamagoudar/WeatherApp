@@ -22,10 +22,8 @@ struct MainView: View {
                     .background(Color.blue)
                     .cornerRadius(10)
             }
-
         }
     }
-    
 }
 
 #Preview {

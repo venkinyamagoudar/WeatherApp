@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "ios-weather-ui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/venkinyamagoudar/ios-weather-ui.git",
+      "state" : {
+        "revision" : "06c747fea7ea1103f0617d1de1dd790cb3ef59cb",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -10,21 +10,25 @@ import ios_weather_ui
 
 struct WeatherView: View {
     @EnvironmentObject var networkManager: NetworkManager
-    @State var dailyPrediction: DailyPrediction?
+    @State private var dailyPrediction: DailyPrediction?
     
     var body: some View {
-        WeatherDetailView(dailyPrediction: $dailyPrediction)
-            .onAppear {
-                fetchWeather()
+        NavigationView {
+            VStack {
+                Section {
+                    WeatherDetailView(dailyPrediction: $dailyPrediction)
+                        .padding()
+                }
+                PredictionView(dailyPrediction: $dailyPrediction)
             }
-        
-        Spacer()
-        if let forecast = dailyPrediction?.forecast.forecastday {
-            PredictionView(predictions: forecast)
         }
-        
+        .onAppear {
+            fetchWeather()
+        }
     }
-    
+}
+
+extension WeatherView {
     func fetchWeather() {
         let url = "https://api.weatherapi.com/v1/forecast.json?key=caa3496acf20492683e152918241502&q=London&days=10&aqi=no&alerts=no"
         networkManager.extractJsonData(from: url) { result in
@@ -35,7 +39,6 @@ struct WeatherView: View {
                 networkManager.parseJsonData(jsonData: data) {[self] result in
                     switch result {
                     case .success(let data):
-                        print(data)
                         self.dailyPrediction = data
                     case .failure(let error):
                         print("\(error)")
@@ -45,7 +48,3 @@ struct WeatherView: View {
         }
     }
 }
-
-//#Preview {
-//    WeatherView(dailyPrediction: .constant())
-//}
